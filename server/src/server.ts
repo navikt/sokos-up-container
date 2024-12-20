@@ -18,17 +18,18 @@ const BUILD_PATH = path.resolve(__dirname, "../dist");
 server.use(
   helmet.contentSecurityPolicy({
     directives: {
-      "script-src": [
+      "script-src": ["'self'", "https://www.nav.no", "https://cdn.nav.no"],
+      "script-src-elem": [
         "'self'",
-        "localhost:5173",
-        "https://www.nav.no",
+        "http://localhost:5173",
         "https://cdn.nav.no",
+        "https://www.nav.no",
       ],
       "connect-src": [
         "'self'",
-        "http://localhost:5173",
         "https://www.nav.no",
         "https://cdn.nav.no",
+        "http://localhost:5173",
         "https://telemetry.ekstern.dev.nav.no",
         "https://telemetry.nav.no/collect",
         "https://umami.nav.no",
