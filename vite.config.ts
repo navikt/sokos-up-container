@@ -25,6 +25,9 @@ export default () => ({
     },
     terser(),
   ],
+  server: {
+    origin: "http://localhost:5173",
+  },
   build: {
     sourcemap: true,
   },
