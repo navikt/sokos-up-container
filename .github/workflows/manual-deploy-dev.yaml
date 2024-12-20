@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 env:
   TZ: Europe/Oslo
+  NODE_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
 
 permissions:
   contents: "write"
