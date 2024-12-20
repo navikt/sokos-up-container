@@ -21,6 +21,8 @@ server.use(
       "script-src": ["'self'", "https://www.nav.no", "https://cdn.nav.no"],
       "connect-src": [
         "'self'",
+        "https://www.nav.no",
+        "https://cdn.nav.no",
         "http://localhost:5173",
         "https://telemetry.ekstern.dev.nav.no",
         "https://telemetry.nav.no/collect",

@@ -30,6 +30,7 @@ export default function Home() {
           <div className={styles["home-heading"]}>
             <Heading level="1" size="large" spacing>
               God dag, {authContext.userData.name}
+              <h2>Tester</h2>
             </Heading>
           </div>
           <GuidePanel
