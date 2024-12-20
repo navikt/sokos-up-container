@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
     name: Build/test & push image
-    uses: navikt/monster-gha-workflows/.github/workflows/node-build-push-image.yaml@main
+    uses: navikt/monster-gha-workflows/.github/workflows/node-build-push-image.yaml@navikt_npm_registry
     secrets: inherit
     with:
       image-tag: snapshot
