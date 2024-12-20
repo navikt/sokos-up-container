@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "postinstall": "cd server && pnpm install",
-    "dev": "vite --mode mock",
-    "dev:nais": "vite",
+    "dev:local": "vite --mode mock",
+    "dev:nais": "vite --mode nais",
     "build": "tsc && vite build --base=/ --outDir dist",
     "test": "vitest",
     "lint": "eslint",
