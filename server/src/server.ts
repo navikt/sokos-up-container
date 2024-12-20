@@ -4,6 +4,7 @@ import expressStaticGzip from "express-static-gzip";
 import helmet from "helmet";
 import path from "path";
 import { register } from "prom-client";
+import { serveViteMode } from "@navikt/vite-mode";
 import Configuration, { Environment } from "./config";
 import { requestSecurelogInfo } from "./logger";
 import { enforceAzureADMiddleware, userInfo } from "./middlewares";
@@ -86,6 +87,8 @@ const startServer = () => {
       }
     }
   });
+
+  serveViteMode(server, { port: "5173" });
 
   server.use(`/assets`, express.static(`${BUILD_PATH}/assets`));
 
