@@ -21,3 +21,7 @@
 .layout-mikrofrontender {
   @apply m-8;
 }
+
+.layout-tilbakemelding {
+  @apply fixed bottom-0 right-0 p-10;
+}

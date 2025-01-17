@@ -1,9 +1,11 @@
 import { ReactNode, useEffect, useState } from "react";
+import useWindowSize from "../../hooks/useWindowSize";
 import {
   getApplicationEnvrionment,
   getEnvironment,
 } from "../../utils/environment";
 import SideBar from "../sidebar/SideBar";
+import Tilbakemelding from "../tilbakemelding/Tilbakemelding";
 import TopBar from "../topbar/TopBar";
 import styles from "./Layout.module.css";
 
@@ -44,6 +46,8 @@ export default function Layout({ children }: LayoutProps) {
     applicationEnvironment: "",
   });
   const [showSideBar, setShowSideBar] = useState(true);
+  const [showTilbakemelding, setShowTilbakemelding] = useState(false);
+  const size = useWindowSize();
 
   useEffect(() => {
     const applicationEnvironment = getApplicationEnvrionment();
@@ -63,6 +67,14 @@ export default function Layout({ children }: LayoutProps) {
           <div className={styles["layout-mikrofrontender"]}>{children}</div>
         </div>
       </div>
+      {(size.width >= 2100 || size.height >= 900) && (
+        <div className={styles["layout-tilbakemelding"]}>
+          <Tilbakemelding
+            showTilbakemelding={showTilbakemelding}
+            setShowTilbakemelding={setShowTilbakemelding}
+          />
+        </div>
+      )}
     </>
   );
 }
