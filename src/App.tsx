@@ -62,6 +62,10 @@ export default function App() {
   return (
     <>
       <Helmet>
+        <meta
+          httpEquiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"
+        />
         <script
           defer
           src="https://cdn.nav.no/team-researchops/sporing/sporing.js"
