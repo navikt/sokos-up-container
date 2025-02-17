@@ -1,15 +1,43 @@
 .home {
-  @apply m-auto min-w-[380px] max-w-[1600px];
+  margin: auto;
+  min-width: 380px;
+  max-width: 1600px;
 }
 
 .home-heading {
-  @apply text-center;
+  text-align: center;
 }
 
 .home-guidepanel {
-  @apply pb-10;
+  padding-bottom: 2.5rem;
 }
 
 .home-apps {
-  @apply grid grid-cols-1 gap-3 1kol:grid-cols-1 2kol:grid-cols-2 3kol:grid-cols-3 4kol:grid-cols-4;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+@media (width >= 880px) {
+  .home-apps {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1024px) {
+  .home-apps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1510px) {
+  .home-apps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1800px) {
+  .home-apps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }

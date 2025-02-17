@@ -1,11 +1,26 @@
 .topbar-logo {
-  @apply ml-3 w-16 pb-1 pl-1 pr-1 pt-1.5;
+  margin-left: 0.75rem;
+  width: 4rem;
+  padding: 0.45rem 0.25rem;
 }
 
 .topbar-container {
-  @apply fixed left-0 right-0 top-0 z-[1000] w-full;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
-/* .julelogo {
-  @apply h-7 w-60;
-} */
+.screenreader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

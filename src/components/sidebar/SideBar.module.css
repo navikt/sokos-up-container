@@ -1,15 +1,58 @@
 .sidebar {
-  @apply fixed z-[1000] mt-1 h-screen min-h-screen w-80 min-w-80 overflow-hidden overflow-y-auto bg-neutral-800 transition-all duration-500 ease-in-out;
+  position: fixed;
+  z-index: 1000;
+  margin-top: 0.3rem;
+  height: 100vh;
+  min-height: 100vh;
+  width: 20rem;
+  min-width: 20rem;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: var(--a-surface-inverted);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .sidebar.closed {
-  @apply z-[1000] w-12 min-w-12;
+  z-index: 1000;
+  width: 3rem;
+  min-width: 3rem;
 }
 
 .sidebar-links {
-  @apply flex min-w-80 flex-col;
+  display: flex;
+  min-width: 20rem;
+  flex-direction: column;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+
+.sidebar-list {
+  margin: 0;
+  padding: 0;
 }
 
 .closebutton {
-  @apply flex flex-row justify-end bg-neutral-800 py-2 pr-2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: var(--a-surface-inverted);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.icon-style {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-bottom: 2px;
+}
+
+.button-color {
+  background-color: var(--a-surface-inverted) !important;
+}
+
+.button-color:hover {
+  background-color: var(--a-surface-inverted-hover) !important;
 }

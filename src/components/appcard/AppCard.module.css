@@ -1,27 +1,44 @@
 .appcard {
-  @apply relative h-full rounded-lg bg-[--a-surface-alt-2-subtle] p-4 text-black shadow-lg shadow-neutral-200;
+  position: relative;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--a-surface-alt-2-subtle);
+  padding: 1rem;
+  color: black;
+  text-decoration: none;
+  box-shadow:
+    0 1px 3px rgb(0 0 0 / 10%),
+    0 1px 2px rgb(0 0 0 / 6%);
 }
 
 .appcard-title {
-  @apply whitespace-nowrap;
+  white-space: nowrap;
 }
 
 .appcard-arrow {
-  @apply absolute right-3 top-8 transition-all ease-out;
+  position: absolute;
+  right: 0.75rem;
+  top: 2rem;
+  transition: all 0.2s ease-out;
 }
 
 .appcard-description {
-  @apply mr-5 text-base text-gray-700;
+  padding-top: 0.1rem;
+  margin-right: 1.25rem;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.appcard:hover .appcard-arrow {
+  right: 0.5rem;
+  transition: all 0.2s;
 }
 
 .appcard:hover {
-  .appcard-arrow {
-    @apply right-2 transition-all duration-200;
-  }
-
-  @apply bg-[--a-surface-alt-1-subtle] underline;
+  background-color: var(--a-surface-alt-1-subtle);
+  text-decoration: underline;
 }
 
 .appcard.disabled {
-  @apply opacity-40;
+  opacity: 0.4;
 }

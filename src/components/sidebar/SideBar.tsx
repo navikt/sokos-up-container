@@ -10,8 +10,6 @@ type SideBarProps = {
   showSideBar?: boolean;
 };
 
-const iconStyle = "w-6 h-6 pb-[2px]";
-
 export default function SideBar({ onToggle, showSideBar }: SideBarProps) {
   const { authorizedApps } = useApps();
 
@@ -23,7 +21,7 @@ export default function SideBar({ onToggle, showSideBar }: SideBarProps) {
     return (
       <div className={`${styles.closed} ${styles.sidebar}`} role="navigation">
         <Button
-          className="bg-neutral-800"
+          className={styles["button-color"]}
           data-umami-event={EVENT_NAME.AAPNE_SIDEBAR}
           onClick={handleToggle}
           variant="primary-neutral"
@@ -53,7 +51,7 @@ export default function SideBar({ onToggle, showSideBar }: SideBarProps) {
       <div className={styles["closebutton"]}>
         <Button
           data-umami-event={EVENT_NAME.LUKK_SIDEBAR}
-          className="bg-neutral-800 w-28"
+          className={styles["button-color"]}
           onClick={handleToggle}
           icon={<XMarkIcon title="Kryss" />}
           iconPosition="right"
@@ -63,14 +61,14 @@ export default function SideBar({ onToggle, showSideBar }: SideBarProps) {
         </Button>
       </div>
 
-      <ul>
+      <ul className={styles["sidebar-list"]}>
         <li className={styles["sidebar-links"]}>
           <SideBarLink
             to={"/"}
             data-umami-event={EVENT_NAME.SIDEBAR_LINK_TRYKKET}
             data-umami-event-app={"Hjem"}
           >
-            <HouseIcon className={iconStyle} title="Hus" />
+            <HouseIcon className={styles["icon-style"]} title="Hus" />
             Hjem
           </SideBarLink>
         </li>

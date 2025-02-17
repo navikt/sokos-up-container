@@ -1,23 +1,32 @@
 .layout-body {
-  @apply mt-11 flex w-full;
+  margin-top: 2.75rem;
+  display: flex;
+  width: 100%;
 }
 
 .layout-content {
-  @apply ml-80 w-full transition-all duration-500 ease-in-out;
+  margin-left: 20rem;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
 }
 
 .content-expanded {
-  @apply ml-12;
+  margin-left: 3rem;
 }
 
 .layout-test-banner {
-  @apply fixed right-0 top-0 z-[1000] mt-12 font-bold;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  margin-top: 3.1rem;
+  font-weight: bold;
 }
 
 .test-ikon polygon {
-  @apply fill-green-400;
+  fill: #4ade80;
 }
 
 .layout-mikrofrontender {
-  @apply m-8;
+  margin: 2rem;
 }

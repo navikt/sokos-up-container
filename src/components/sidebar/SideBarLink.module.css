@@ -1,15 +1,27 @@
 .sidebarlink {
-  @apply mx-2 whitespace-nowrap rounded px-8 py-2 text-[--a-surface-default] underline;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  padding: 0.5rem 2rem;
+  color: var(--a-surface-default);
+  text-decoration: underline;
 }
 
 .sidebarlink:hover {
-  @apply no-underline;
+  text-decoration: none;
 }
 
 .sidebarlink.active {
-  @apply pointer-events-none bg-[--a-purple-400] no-underline transition-all duration-200;
+  pointer-events: none;
+  background-color: var(--a-purple-400);
+  text-decoration: none;
+  transition-property: all;
+  transition-duration: 200ms;
 }
 
 .sidebarlink-child {
-  @apply flex flex-row gap-1;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
 }

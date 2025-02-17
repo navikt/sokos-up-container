@@ -10,13 +10,11 @@ export default function TopBar() {
   return (
     <div className={styles["topbar-container"]}>
       <InternalHeader>
-        <div className={styles["topbar-logo"]}>
-          <img src={nav} alt="NAV logo" />
-        </div>
-        <InternalHeader.Title as={Link} to={"/"} className="border-none">
+        <img src={nav} alt="NAV logo" className={styles["topbar-logo"]} />
+        <InternalHeader.Title as={Link} to={"/"}>
           Utbetalingsportalen
         </InternalHeader.Title>
-        <a href="#main-content" className="sr-only">
+        <a href="#main-content" className={styles["screenreader-only"]}>
           Hopp til hovedinnhold
         </a>
         <Spacer />
